@@ -166,7 +166,40 @@ angular.module('openshiftConsole')
     return {
       restrict: 'E',
       transclude: true,
-      templateUrl: 'views/directives/header/_navbar-utility.html'
+      templateUrl: 'views/directives/header/_navbar-utility.html',
+      controller: function($scope) {
+        $scope.navigationItems = [
+          {
+            title: "Recteque",
+            href: "#/ipsum/intellegam/recteque",
+            tooltip: "Launch the Function User Interface",
+            iconClass: "pficon-storage-domain"
+          },
+          {
+            title: "Suavitate",
+            href: "#/ipsum/intellegam/suavitate",
+            tooltip: "Launch the Function User Interface",
+            iconClass: "pficon-build"
+          },
+          {
+            title: "Lorem",
+            href: "#/ipsum/intellegam/lorem",
+            tooltip: "Launch the Function User Interface",
+            iconClass: "pficon-domain"
+          },
+          {
+            title: "Home",
+            href: "#/ipsum/intellegam/home",
+            tooltip: "Launch the Function User Interface",
+            iconClass: "pficon-home"
+          }
+        ];
+
+        $scope.isDisabled = false;
+        $scope.isOpen = false;
+        $scope.isList = false;
+        $scope.hiddenIcons = false;
+      }
     };
   })
   .directive('navbarUtilityMobile', function() {
@@ -180,7 +213,40 @@ angular.module('openshiftConsole')
     return {
       restrict: 'E',
       transclude: true,
-      templateUrl: 'views/directives/header/default-header.html'
+      templateUrl: 'views/directives/header/default-header.html',
+      controller: function($scope) {
+        $scope.navigationItems = [
+          {
+            title: "Recteque",
+            href: "#/ipsum/intellegam/recteque",
+            tooltip: "Launch the Function User Interface",
+            iconClass: "pficon-storage-domain"
+          },
+          {
+            title: "Suavitate",
+            href: "#/ipsum/intellegam/suavitate",
+            tooltip: "Launch the Function User Interface",
+            iconClass: "pficon-build"
+          },
+          {
+            title: "Lorem",
+            href: "#/ipsum/intellegam/lorem",
+            tooltip: "Launch the Function User Interface",
+            iconClass: "pficon-domain"
+          },
+          {
+            title: "Home",
+            href: "#/ipsum/intellegam/home",
+            tooltip: "Launch the Function User Interface",
+            iconClass: "pficon-home"
+          }
+        ];
+
+        $scope.isDisabled = false;
+        $scope.isOpen = false;
+        $scope.isList = false;
+        $scope.hiddenIcons = false;
+      }
     };
   })
   // TODO: rename this :)
