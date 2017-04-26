@@ -176,12 +176,28 @@
   .navbar-utility .applauncher-pf,
   .applauncher-pf {
 
+    &.open > a,
+    &.open > a:focus {
+      background-color: inherit;
+      border-color: inherit;
+    }
+
     &.dropdown > .dropdown-toggle,
     .dropdown-toggle {
 
       @media (min-width: @screen-sm-min) {
-        padding: 15px;
+        border-left-width: 0;
+        padding: 20px;
         line-height: inherit;
+      }
+    }
+  }
+
+  .dropdown-kebab-pf {
+    .dropdown-menu {
+      &:after,
+      &:before {
+        border-color: transparent;
       }
     }
   }
