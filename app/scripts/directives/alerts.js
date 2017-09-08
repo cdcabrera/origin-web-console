@@ -24,7 +24,7 @@ angular.module('openshiftConsole')
         toast: '=?'
       },
       templateUrl: 'views/_alerts.html',
-      link: function($scope) {
+      link: function($scope, $sce) {
         $scope.close = function(alert) {
           alert.hidden = true;
           if (_.isFunction(alert.onClose)) {
@@ -39,6 +39,9 @@ angular.module('openshiftConsole')
               alert.hidden = true;
             }
           }
+        };
+        $scope.trustAsHtml = function (html) {
+          return $sce.trustAsHtml(html);
         };
       }
     };

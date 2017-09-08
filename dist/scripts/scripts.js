@@ -10243,11 +10243,13 @@ hideCloseButton: "=?",
 toast: "=?"
 },
 templateUrl: "views/_alerts.html",
-link: function(e) {
+link: function(e, t) {
 e.close = function(e) {
 e.hidden = !0, _.isFunction(e.onClose) && e.onClose();
 }, e.onClick = function(e, t) {
 _.isFunction(t.onClick) && t.onClick() && (e.hidden = !0);
+}, e.trustAsHtml = function(e) {
+return t.trustAsHtml(e);
 };
 }
 };

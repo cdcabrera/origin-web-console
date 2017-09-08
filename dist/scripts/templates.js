@@ -23,7 +23,7 @@ angular.module('openshiftConsoleTemplates', []).run(['$templateCache', function(
     "        'pficon-info': !alert.type || alert.type === 'info'\n" +
     "      }\"></span>\n" +
     "<span class=\"sr-only\">{{alert.type}}</span>\n" +
-    "<span ng-if=\"alert.message\" style=\"margin-right: 5px\" ng-class=\"{'strong': !toast}\">{{alert.message}}</span><span ng-if=\"alert.details\">{{alert.details}}</span>\n" +
+    "<span ng-if=\"alert.message\" style=\"margin-right: 5px\" ng-class=\"{'strong': !toast}\" ng-bind-html=\"trustAsHtml(alert.message)\"></span><span ng-if=\"alert.details\" ng-bind-html=\"trustAsHtml(alert.details)\"></span>\n" +
     "<span ng-repeat=\"link in alert.links\">\n" +
     "<a ng-if=\"!link.href\" href=\"\" ng-click=\"onClick(alert, link)\" role=\"button\" ng-attr-target=\"{{link.target}}\">{{link.label}}</a>\n" +
     "<a ng-if=\"link.href\" href=\"{{link.href}}\" ng-click=\"onClick(alert, link)\" ng-attr-target=\"{{link.target}}\">{{link.label}}</a>\n" +
