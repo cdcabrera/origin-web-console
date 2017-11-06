@@ -12914,6 +12914,7 @@ angular.module('openshiftConsoleTemplates', []).run(['$templateCache', function(
     "<div class=\"container-fluid\">\n" +
     "<div class=\"row\">\n" +
     "<div class=\"col-md-12\">\n" +
+    "Hello World...\n" +
     "<div ng-if=\"alerts\" class=\"alerts\">\n" +
     "<alerts alerts=\"alerts\"></alerts>\n" +
     "</div>\n" +
